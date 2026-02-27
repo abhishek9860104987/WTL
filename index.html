@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sweet Scoops Ice Cream</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: #fff7f0;
+        }
+
+        /* NAVBAR */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+            background: #ff6f61;
+            color: white;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            background: linear-gradient(to right, #ff9a9e, #fad0c4);
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 50px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 20px;
+        }
+
+        .hero button {
+            margin-top: 25px;
+            padding: 12px 30px;
+            font-size: 16px;
+            background: #ff6f61;
+            color: white;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+        }
+
+        .hero button:hover {
+            background: #e85a4f;
+        }
+
+        /* PRODUCTS */
+        .products {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding: 50px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            width: 220px;
+            text-align: center;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .card h3 {
+            color: #ff6f61;
+        }
+
+        .card button {
+            margin-top: 10px;
+            padding: 8px 15px;
+            border: none;
+            background: #ff9a9e;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        .card button:hover {
+            background: #ff6f61;
+            color: white;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #ff6f61;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav>
+        <h2>🍦 Sweet Scoops</h2>
+        
+    <div class="search-box">
+        <input type="text" placeholder="Search flavours...">
+    </div>
+        <div>
+            <a href="#">Home</a>
+            <a href="#">Flavours</a>
+            <a href="#">Offers</a>
+            <a href="#">Contact</a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+       
+        <h1>Happiness in Every Scoop!</h1>
+        <p>Fresh • Creamy • Delicious Ice Creams</p>
+        <button onclick="orderNow()">Order Now</button>
+        <h3 id="msg"></h3>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section class="products">
+        <div class="card">
+            <h3>Vanilla</h3>
+            <p>Classic & Creamy</p>
+            <button>Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <h3>Chocolate</h3>
+            <p>Rich & Smooth</p>
+            <button>Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <h3>Strawberry</h3>
+            <p>Fresh & Fruity</p>
+            <button>Add to Cart</button>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        © 2026 Sweet Scoops Ice Cream | Made with ❤️
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        function orderNow() {
+            document.getElementById("msg").innerHTML =
+                "🎉 Flat 20% OFF on your first order!";
+        }
+    </script>
+
+</body>
+</html>
