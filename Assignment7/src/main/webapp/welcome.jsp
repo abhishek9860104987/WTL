@@ -1,0 +1,30 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome - User Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="welcome-container">
+            <h2>Welcome, <%= session.getAttribute("username") %>!</h2>
+            <p>You have successfully logged in.</p>
+            
+            <div class="user-info">
+                <h3>Your Information:</h3>
+                <p><strong>Username:</strong> <%= session.getAttribute("username") %></p>
+                <p><strong>Email:</strong> <%= session.getAttribute("email") %></p>
+                <p><strong>User ID:</strong> <%= session.getAttribute("userId") %></p>
+            </div>
+            
+            <div class="actions">
+                <a href="books" class="btn btn-primary">Manage Books</a>
+                <a href="logout" class="btn btn-secondary">Logout</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
